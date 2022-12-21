@@ -1,5 +1,8 @@
+#python 3.10
+import socket
+
+
 # Receive data from the server
-data = receive_data_from_server()
 
 def receive_data_from_server():
     # Set up the socket
@@ -15,3 +18,6 @@ def receive_data_from_server():
     conn.close()
 
     return data
+
+
+receive_data_from_server()
