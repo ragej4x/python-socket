@@ -1,17 +1,17 @@
-    # Receive data from the server
-    data = receive_data_from_server()
-    
-    def receive_data_from_server():
-      # Set up the socket
-      sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-      sock.bind(("localhost", 8000))
-      sock.listen(1)
-      conn, addr = sock.accept()
+# Receive data from the server
+data = receive_data_from_server()
 
-      # Receive data
-      data = conn.recv(1024)  # receive up to 1024 bytes
+def receive_data_from_server():
+    # Set up the socket
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.bind(("localhost", 8000))
+    sock.listen(1)
+    conn, addr = sock.accept()
 
-      # Close the connection
-      conn.close()
+    # Receive data
+    data = conn.recv(1024)  # receive up to 1024 bytes
 
-      return data
+    # Close the connection
+    conn.close()
+
+    return data
